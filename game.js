@@ -1,7 +1,14 @@
 //Vengful spirit defenses
 //I want the defenses to be decreced by a certain amount for each volley
 
-let voidSheilds = 1250;
+let health = 3250;
+let shipHealth = document.getElementById("health")
+
+// let armorPlate = 500;
+
+// let repelBoarders = 500;
+
+
 
 // loyalist attack variables
 // i want a set number of munitions 
@@ -10,22 +17,31 @@ let voidSheilds = 1250;
 // 6 boarding torpedos 
 // all to go down by 1 when used.
 
-// damage to be done
-let lazCannons = 150;
-let gunBattery = 350;
-let boardingTorpedos = 200;
+// health to be done
+let lazCannons = 10;
+let gunBattery = 50;
+let boardingTorpedos = 100;
 
 // Do I set values for the munitions?
 
-function attack() {
-  voidSheilds -= lazCannons
-  console.log(voidSheilds)
+function lazAttack() {
+  health -= lazCannons
+  console.log(health)
+  if (health <= 2200) {
+    shipHealth.innerHTML = "Void Shields Destroyed!!!"
+  }
+  if (health <= 1100) {
+
+  }
 }
 
 
 function gunVolley() {
-  voidSheilds -= gunBattery
-  console.log(voidSheilds)
+  health -= gunBattery
+  console.log(health)
+  if (health <= 1700) {
+    shipHealth.innerHTML = "Armor Destroyed!!!"
+  }
 
 }
 
