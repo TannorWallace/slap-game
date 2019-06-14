@@ -1,7 +1,7 @@
 //Vengful spirit defenses
 
 let voidSheilds = 500;
-let armorPlate = 1000;
+let armorPlate = 500;
 let repelBoarders = 250;
 
 // loyalist attack variables
