@@ -20,13 +20,14 @@ let lazCannons = 25;
 let gunBattery = 50;
 let boardingTorpedos = 100;
 
-// let decrement = document.getElementById("#damage-done")
+let damage = document.getElementById("#progess");
 
 // decrement.textContent = shipHealth.
 
 function lazAttack() {
 
   health -= lazCannons
+  damage = health
   console.log(health)
   if (health <= 2200) {
     shipHealth.innerHTML = "Void Shields Destroyed!!!"
@@ -88,9 +89,8 @@ function torpedos() {
     shipHealth.innerHTML = "Ship Destroyed Glory to the EMPEROR!!!"
 
 }
-function upate() {
-  document.getElementById("damage-done").innerText;
-  document.getElementById("damage-done").innerHTML = lazAttack;
+// let damage = document.getElementById("#progess");
+function () {
 }
 
 // update()
