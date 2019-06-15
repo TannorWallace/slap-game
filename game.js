@@ -23,6 +23,9 @@ let gunBattery = 50;
 let boardingTorpedos = 100;
 
 // Do I set values for the munitions?
+function update() {
+  document.getElementById('health').innerText
+}
 
 function lazAttack() {
   health -= lazCannons
@@ -40,7 +43,7 @@ function lazAttack() {
     shipHealth.innerHTML = "Press the attack!!!"
   }
   if (health == 0)
-    shipHealth.innerHTML = "Ship Destroyed Victory to the EMPEROR!!!"
+    shipHealth.innerHTML = "Ship Destroyed Glory to the EMPEROR!!!"
 
 }
 
@@ -62,7 +65,7 @@ function gunVolley() {
     shipHealth.innerHTML = "Press the attack!!!"
   }
   if (health == 0)
-    shipHealth.innerHTML = "Ship Destroyed Victory to the EMPEROR!!!"
+    shipHealth.innerHTML = "Ship Destroyed Glory to the EMPEROR!!!"
 
 }
 
@@ -83,6 +86,9 @@ function torpedos() {
     shipHealth.innerHTML = "Press the attack!!!"
   }
   if (health == 0)
-    shipHealth.innerHTML = "Ship Destroyed Victory to the EMPEROR!!!"
+    shipHealth.innerHTML = "Ship Destroyed Glory to the EMPEROR!!!"
 
 }
+
+
+update()
