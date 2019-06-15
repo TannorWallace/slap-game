@@ -30,24 +30,59 @@ function lazAttack() {
   if (health <= 2200) {
     shipHealth.innerHTML = "Void Shields Destroyed!!!"
   }
-  if (health <= 1100) {
-
+  if (health <= 1700) {
+    shipHealth.innerHTML = "Armor Destroyed!!!"
   }
+  if (health <= 900) {
+    shipHealth.innerHTML = "Victory is close Brothers!!!"
+  }
+  if (health <= 300) {
+    shipHealth.innerHTML = "Victory is close Brothers!!!"
+  }
+  if (health == 0)
+    shipHealth.innerHTML = "Ship Destroyed Victory to the EMPEROR!!!"
+
 }
+
 
 
 function gunVolley() {
   health -= gunBattery
   console.log(health)
+  if (health <= 2200) {
+    shipHealth.innerHTML = "Void Shields Destroyed!!!"
+  }
   if (health <= 1700) {
     shipHealth.innerHTML = "Armor Destroyed!!!"
   }
+  if (health <= 900) {
+    shipHealth.innerHTML = "Victory is close Brothers!!!"
+  }
+  if (health <= 300) {
+    shipHealth.innerHTML = "Victory is close Brothers!!!"
+  }
+  if (health == 0)
+    shipHealth.innerHTML = "Ship Destroyed Victory to the EMPEROR!!!"
 
 }
 
 
 function torpedos() {
-  voidSheilds -= boardingTorpedos
-  console.log(voidSheilds)
+  health -= boardingTorpedos
+  console.log(health)
+  if (health <= 2200) {
+    shipHealth.innerHTML = "Void Shields Destroyed!!!"
+  }
+  if (health <= 1700) {
+    shipHealth.innerHTML = "Armor Destroyed!!!"
+  }
+  if (health <= 900) {
+    shipHealth.innerHTML = "Victory is close Brothers!!!"
+  }
+  if (health <= 300) {
+    shipHealth.innerHTML = "Victory is close Brothers!!!"
+  }
+  if (health == 0)
+    shipHealth.innerHTML = "Ship Destroyed Victory to the EMPEROR!!!"
 
 }
