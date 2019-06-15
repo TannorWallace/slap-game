@@ -4,7 +4,9 @@
 let health = 3250;
 let shipHealth = document.getElementById("health")
 
+// let armorPlate = 500;
 
+// let repelBoarders = 500;
 
 
 
@@ -16,22 +18,17 @@ let shipHealth = document.getElementById("health")
 // all to go down by 1 when used.
 
 // health to be done
-let lazCannons = 25;
+let lazCannons = 10;
 let gunBattery = 50;
 let boardingTorpedos = 100;
 
-let damage = document.getElementById("#progess");
-
-// decrement.textContent = shipHealth.
+// Do I set values for the munitions?
 
 function lazAttack() {
-
   health -= lazCannons
-  damage = health
   console.log(health)
   if (health <= 2200) {
     shipHealth.innerHTML = "Void Shields Destroyed!!!"
-
   }
   if (health <= 1700) {
     shipHealth.innerHTML = "Armor Destroyed!!!"
@@ -42,8 +39,8 @@ function lazAttack() {
   if (health <= 300) {
     shipHealth.innerHTML = "Press the attack!!!"
   }
-  if (health <= 0)
-    shipHealth.innerHTML = "Ship Destroyed Glory to the EMPEROR!!!"
+  if (health == 0)
+    shipHealth.innerHTML = "Ship Destroyed Victory to the EMPEROR!!!"
 
 }
 
@@ -64,8 +61,8 @@ function gunVolley() {
   if (health <= 300) {
     shipHealth.innerHTML = "Press the attack!!!"
   }
-  if (health <= 0)
-    shipHealth.innerHTML = "Ship Destroyed Glory to the EMPEROR!!!"
+  if (health == 0)
+    shipHealth.innerHTML = "Ship Destroyed Victory to the EMPEROR!!!"
 
 }
 
@@ -85,12 +82,7 @@ function torpedos() {
   if (health <= 300) {
     shipHealth.innerHTML = "Press the attack!!!"
   }
-  if (health <= 0)
-    shipHealth.innerHTML = "Ship Destroyed Glory to the EMPEROR!!!"
+  if (health == 0)
+    shipHealth.innerHTML = "Ship Destroyed Victory to the EMPEROR!!!"
 
 }
-// let damage = document.getElementById("#progess");
-function () {
-}
-
-// update()

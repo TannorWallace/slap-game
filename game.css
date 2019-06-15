@@ -2,11 +2,15 @@
   text-align: center;
 }
 
-/* *{
+ *{
   border: 1px solid black;
-} */
+}
 
 .veng-spirit{
   height: 200px;
   width: 200px;
 }
+
+/* .progress-bar{
+  /* align-content: center; */
+  /* justify-content: center; */
