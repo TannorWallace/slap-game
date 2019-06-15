@@ -4,9 +4,7 @@
 let health = 3250;
 let shipHealth = document.getElementById("health")
 
-// let armorPlate = 500;
 
-// let repelBoarders = 500;
 
 
 
@@ -18,17 +16,21 @@ let shipHealth = document.getElementById("health")
 // all to go down by 1 when used.
 
 // health to be done
-let lazCannons = 10;
+let lazCannons = 25;
 let gunBattery = 50;
 let boardingTorpedos = 100;
 
-// Do I set values for the munitions?
+// let decrement = document.getElementById("#damage-done")
+
+// decrement.textContent = shipHealth.
 
 function lazAttack() {
+
   health -= lazCannons
   console.log(health)
   if (health <= 2200) {
     shipHealth.innerHTML = "Void Shields Destroyed!!!"
+
   }
   if (health <= 1700) {
     shipHealth.innerHTML = "Armor Destroyed!!!"
@@ -37,10 +39,10 @@ function lazAttack() {
     shipHealth.innerHTML = "Victory is close Brothers!!!"
   }
   if (health <= 300) {
-    shipHealth.innerHTML = "Victory is close Brothers!!!"
+    shipHealth.innerHTML = "Press the attack!!!"
   }
-  if (health == 0)
-    shipHealth.innerHTML = "Ship Destroyed Victory to the EMPEROR!!!"
+  if (health <= 0)
+    shipHealth.innerHTML = "Ship Destroyed Glory to the EMPEROR!!!"
 
 }
 
@@ -59,10 +61,10 @@ function gunVolley() {
     shipHealth.innerHTML = "Victory is close Brothers!!!"
   }
   if (health <= 300) {
-    shipHealth.innerHTML = "Victory is close Brothers!!!"
+    shipHealth.innerHTML = "Press the attack!!!"
   }
-  if (health == 0)
-    shipHealth.innerHTML = "Ship Destroyed Victory to the EMPEROR!!!"
+  if (health <= 0)
+    shipHealth.innerHTML = "Ship Destroyed Glory to the EMPEROR!!!"
 
 }
 
@@ -80,9 +82,15 @@ function torpedos() {
     shipHealth.innerHTML = "Victory is close Brothers!!!"
   }
   if (health <= 300) {
-    shipHealth.innerHTML = "Victory is close Brothers!!!"
+    shipHealth.innerHTML = "Press the attack!!!"
   }
-  if (health == 0)
-    shipHealth.innerHTML = "Ship Destroyed Victory to the EMPEROR!!!"
+  if (health <= 0)
+    shipHealth.innerHTML = "Ship Destroyed Glory to the EMPEROR!!!"
 
 }
+function upate() {
+  document.getElementById("damage-done").innerText;
+  document.getElementById("damage-done").innerHTML = lazAttack;
+}
+
+// update()
