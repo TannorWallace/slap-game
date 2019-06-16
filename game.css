@@ -2,6 +2,9 @@
   text-align: center;
 }
 
+*{
+font-family: 'Carrois Gothic SC', sans-serif;
+}
   /* *{
   border: 1px solid black;
 }  */
@@ -9,8 +12,4 @@
 .veng-spirit{
   height: 300px;
   width: 500px;
-}
-
-*{
-font-family: 'Carrois Gothic SC', sans-serif;
 }
