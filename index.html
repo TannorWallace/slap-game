@@ -16,7 +16,7 @@
     <div class="container-fluid d-flex justify-content-center bg-secondary border border-dark">
       <div class="row justify-content-center">
         <div class="col-md-12 justify-content-center bg-secondary">
-          <h2 class="d-flex justify-content-center">Destroy the Vengeful Spirit!</h2>
+          <h2 class="d-flex justify-content-center border border-dark">Destroy the Vengeful Spirit!</h2>
           <!--  -->
 
 
@@ -25,56 +25,31 @@
           <div class="progress">
 
 
-            <div id="conflict" class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuemin="0"
-              aria-valuemax="3200">
+            <div id="conflict" class="progress-bar bg-danger border border-dark" role="progressbar" style="width: 100%"
+              aria-valuemin="0" aria-valuemax="3200">
             </div>
 
           </div>
           <span></span>
           <span></span>
+          <div class="row border border-dark">
+            <div class="col-md-12 justify-content-center">
+              <h3> Enemy Status:</h3>
+              <header><span><span id="health"></span></header></span>
+              <img class="veng-spirit" src="/images/vengspir.jpg" alt="">
 
+            </div>
+          </div>
         </div>
         <div class="row d-flex justify-content-center">
-          <div class="col-md-4 align-items-center">
-            <span>
-              <h3>Loyalist Battleship</h3>
-            </span>
-            <span>
-              <h4>Laz Cannons</h4>
-            </span>
-            <span>
-              <h4>Gun Battery</h4>
-            </span>
-            <span>
-              <h4>Boarding Torpedos</h4>
-              <button class="btn btn-warning mb-2 border border-dark" onclick="lazAttack()">Laz Cannons</button>
-              <button class=" btn btn-warning mb-2 border border-dark" onclick="gunVolley()">Gun Battery</button>
-              <button class="btn btn-danger mb-2 border border-dark" onclick="torpedos()"> Bordering
-                Torpedos</button>
+          <div class="col-md-12 ">
+            <button class="btn btn-warning btn-lg btn-block mb-2 border border-dark" onclick="lazAttack()">Laz
+              Cannons</button>
+            <button class=" btn btn-warning btn-lg btn-block mb-2 border border-dark" onclick="gunVolley()">Gun
+              Battery</button>
+            <button class="btn btn-danger btn-lg btn-block mb-2 border border-dark" onclick="torpedos()"> Bordering
+              Torpedos</button>
           </div>
-          <div class="col-md-4 justify-content-center">
-            <h3> Enemy Status:</h3>
-            <header><span><span id="health"></span></header></span>
-            <img class="veng-spirit" src="/images/" alt="">
-
-          </div>
-
-          <!-- WAR MASTER HORUS' SHIP DENFENSES -->
-          <div class="col-md-4">
-            <span>
-              <h3>Vengeful Spirit</h3>
-            </span>
-            <span>
-              <h4>Void Shields</h4>
-            </span>
-            <span>
-              <h4>Armor</h4>
-            </span>
-            <span>
-              <h4>Repel Borders</h4>
-              <button class="btn btn-warning mb-2">Void Shields</button>
-              <button class=" btn btn-warning mb-2">Armor Plating</button>
-              <button class="btn btn-danger mb-2">Repel Boarders</button></div>
 
         </div>
       </div>
