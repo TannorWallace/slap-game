@@ -42,6 +42,20 @@ function update() {
 
 }
 
+
+let dictionary = [
+  {
+    attack1: 'lazAttack'
+  },
+  {
+    attack2: 'gunVolley'
+  },
+  {
+    attack3: 'torpedos'
+  }]
+
+
+
 function lazAttack() {
   health -= lazCannons
   console.log(health)
