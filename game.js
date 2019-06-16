@@ -43,18 +43,20 @@ function update() {
 }
 
 
-let dictionary = [
-  {
-    attack1: 'lazAttack'
-  },
-  {
-    attack2: 'gunVolley'
-  },
-  {
-    attack3: 'torpedos'
-  }]
 
 
+//vengeful spirit mods?
+let resistance = [
+  {
+    voids: 'something' //reduce lazAttack by 25%
+  },
+  {
+    flak: 'something else' //reduce gunBattery by 15%
+  },
+  {
+    repelBoarders: 'another something' //reduce boardingTorpedos by 10%
+  }
+]
 
 function lazAttack() {
   health -= lazCannons
