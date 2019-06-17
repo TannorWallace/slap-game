@@ -24,7 +24,7 @@
 
 
 
-          <h3> Enemy Status:</h3>
+          <h3> Enemy Status: <span id="enemy-health"></span></h3>
           <div class="progress">
             <div id="health-bar" class="progress-bar bg-danger border border-dark font-weight-bolder" role="progressbar"
               style="width: 100%" aria-valuemin="0" aria-valuemax="3200">
@@ -70,21 +70,24 @@
             </div>
 
           </div>
-          <h3> Vengeful Spirit Defenses:</h3>
-          <div class="row d-flex justify-content-center">
-            <div class="col-md-12 ">
+
+          <h3 class="border border-dark"> Vengeful Spirit Defenses:</h3>
+          <div class="row d-flex justify-content-center ">
+            <div class="col-md-12 border border-dark">
 
 
 
-              <button class="btn btn-warning btn-lg btn-block mb-2 border border-dark" onclick="lazAttack()">Raise Void
+              <button class="btn btn-warning btn-lg btn-block mb-2 border border-dark" onclick="addItem('voids')">Raise
+                Void
                 shield</button>
 
 
 
-              <button class=" btn btn-warning btn-lg btn-block mb-2 border border-dark" onclick="gunVolley()"> Flak
+              <button class=" btn btn-warning btn-lg btn-block mb-2 border border-dark" onclick="addItem('flak')"> Flak
                 Cannon Volley </button>
 
-              <button class="btn btn-danger btn-lg btn-block mb-2 border border-dark" onclick="torpedos()">
+              <button class="btn btn-danger btn-lg btn-block mb-2 border border-dark"
+                onclick="addItem('repelBoarders')">
                 Repel Boarders</button>
             </div>
 

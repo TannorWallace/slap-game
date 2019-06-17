@@ -14,6 +14,10 @@ font-family: 'Carrois Gothic SC', sans-serif;
   width: 500px;
 }
 .progress{
-  font-size: 17px;
+  /* font-size: 35px; */
   height: 25px;
+}
+
+h3{
+  text-decoration: underline;
 }
