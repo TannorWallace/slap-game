@@ -52,15 +52,16 @@ let resistanceItems = {
     name: 'Voids',
     modifier: 5
   },  //reduce lazAttack by 25%
-  flak: {}, //reduce gunBattery by 15%
-  repelBoarders: {} //reduce boardingTorpedos by 10%
+  flak: {
+    name: 'flak',
+    modifier: 15
+  }, //reduce gunBattery by 15%
+  repelBoarders: {
+    name: 'repelBoarders',
+    modifier: 10
+  } //reduce boardingTorpedos by 10%
 }
-
-function lazAttack() {
-  health -= lazCannons // + addMods()
-  console.log(health)
-  // -------------------------------------------------
-  //move this code into update(), which is in each attack method
+function update() {
   if (health <= 2200) {
     shipHealth.innerHTML = "Void Shields Destroyed!!!"
   }
@@ -76,7 +77,15 @@ function lazAttack() {
   if (health == 0) {
     shipHealth.innerHTML = "Ship Destroyed Glory to the EMPEROR!!!"
   }
-  // -------------------------------------------------------------
+
+}
+function lazAttack() {
+  health -= lazCannons // + addMods()
+  console.log(health)
+  // -------------------------------------------------
+  //move this code into update(), which is in each attack method
+  //-------------------------------------------------------------
+  update()
   playBtnSound()
   //invoke update at the end of each attack method
 }
@@ -85,43 +94,17 @@ function lazAttack() {
 function gunVolley() {
   health -= gunBattery
   console.log(health)
-  // if (health <= 2200) {
-  //   shipHealth.innerHTML = "Void Shields Destroyed!!!"
-  // }
-  // if (health <= 1700) {
-  //   shipHealth.innerHTML = "Armor Destroyed!!!"
-  // }
-  // if (health <= 900) {
-  //   shipHealth.innerHTML = "Victory is close Brothers!!!"
-  // }
-  // if (health <= 300) {
-  //   shipHealth.innerHTML = "Press the attack!!!"
-  // }
-  // if (health == 0) {
-  //   shipHealth.innerHTML = "Ship Destroyed Glory to the EMPEROR!!!"
 
-  // }
   update()
+  playBtnSound()
 }
 
 function torpedos() {
   health -= boardingTorpedos
   console.log(health)
-  if (health <= 2200) {
-    shipHealth.innerHTML = "Void Shields Destroyed!!!"
-  }
-  if (health <= 1700) {
-    shipHealth.innerHTML = "Armor Destroyed!!!"
-  }
-  if (health <= 900) {
-    shipHealth.innerHTML = "Victory is close Brothers!!!"
-  }
-  if (health <= 300) {
-    shipHealth.innerHTML = "Press the attack!!!"
-  }
-  if (health == 0) {
-    shipHealth.innerHTML = "Ship Destroyed Glory to the EMPEROR!!!"
-  }
+
+  update()
+  playBtnSound()
 }
 
 
