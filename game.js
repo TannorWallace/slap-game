@@ -42,13 +42,16 @@ function update() {
 
 }
 
-let explosion = new Audio();
-shoot.src = "explosion.mp3";
+let explosion = document.getElementById("explode");
+
 
 function playBtnSound() {
+
   explosion.play();
+  console.log("play audio")
 }
 
+playBtnSound()
 
 //vengeful spirit mods?
 let resistance = [
@@ -78,9 +81,10 @@ function lazAttack() {
   if (health <= 300) {
     shipHealth.innerHTML = "Press the attack!!!"
   }
-  if (health == 0)
+  if (health == 0) {
     shipHealth.innerHTML = "Ship Destroyed Glory to the EMPEROR!!!"
-
+  }
+  playBtnSound()
 }
 
 
@@ -99,9 +103,9 @@ function gunVolley() {
   if (health <= 300) {
     shipHealth.innerHTML = "Press the attack!!!"
   }
-  if (health == 0)
+  if (health == 0) {
     shipHealth.innerHTML = "Ship Destroyed Glory to the EMPEROR!!!"
-
+  }
 }
 
 
@@ -120,9 +124,9 @@ function torpedos() {
   if (health <= 300) {
     shipHealth.innerHTML = "Press the attack!!!"
   }
-  if (health == 0)
+  if (health == 0) {
     shipHealth.innerHTML = "Ship Destroyed Glory to the EMPEROR!!!"
-
+  }
 }
 
 
