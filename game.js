@@ -5,9 +5,9 @@
 let enemy = {
   health: 3250,
   attacks: {
-    lazCannons: 10,
-    gunBattery: 50,
-    boardingTorpedos: 100
+    // lazCannons: 10,
+    // gunBattery: 50,
+    // boardingTorpedos: 100
   },
   items: []
 }
@@ -88,11 +88,11 @@ function lazAttack() {
   enemy.health -= lazCannons + addMods()
   console.log(enemy.health)
   // -------------------------------------------------
-  //move this code into update(), which is in each attack method
+
   //-------------------------------------------------------------
   update()
   playBtnSound()
-  //invoke update at the end of each attack method
+
 }
 
 
@@ -115,11 +115,6 @@ function torpedos() {
 
 update()
 
-// **nevermind on this one **function updateHealthBar() { //STRETCH GOAL
-//   //grab the healthbar element (getElementById or QuerySelector)
-//   //calculate the percentage value of the enemy ships health remaining
-//   //use setAttribute() to change the value of the style attribute on the #health-bar element to the appropriate percentage
-// }
 
 function addItem(item) {
   if (!enemy.items.length) {
@@ -135,6 +130,7 @@ function addMods() {
   for (let index = 0; index < enemy.items.length; index++) {
     let item = enemy.items[index];
     modifierTotal += item.modifier
+    update()
   }
   console.log(modifierTotal)
   return modifierTotal
@@ -143,3 +139,4 @@ function addMods() {
   //add the modifier value of each object to the modifierTotal variable
   // return the modifierTotal
 }
+update()
