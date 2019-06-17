@@ -53,11 +53,16 @@
           </div>
           <div class="row d-flex justify-content-center">
             <div class="col-md-12 ">
-              <button class="btn btn-warning btn-lg btn-block mb-2 border border-dark" onclick="lazAttack()">Laz
+              <audio id="explode" src="/audio/explosion.mp3" type="audio/mp3"></audio>
+              <button class="btn btn-warning btn-lg btn-block mb-2 border border-dark" onclick="lazAttack()"
+                onclick="playBtnSound()">Laz
                 Cannons</button>
+
+
               <button class=" btn btn-warning btn-lg btn-block mb-2 border border-dark" onclick="gunVolley()">Gun
                 Battery</button>
-              <button class="btn btn-danger btn-lg btn-block mb-2 border border-dark" onclick="torpedos()"> Bordering
+              <button class="btn btn-danger btn-lg btn-block mb-2 border border-dark" onclick="torpedos()">
+                Bordering
                 Torpedos</button>
             </div>
 

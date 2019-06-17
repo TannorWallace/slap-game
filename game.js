@@ -42,7 +42,12 @@ function update() {
 
 }
 
+let explosion = new Audio();
+shoot.src = "explosion.mp3";
 
+function playBtnSound() {
+  explosion.play();
+}
 
 
 //vengeful spirit mods?
@@ -77,7 +82,6 @@ function lazAttack() {
     shipHealth.innerHTML = "Ship Destroyed Glory to the EMPEROR!!!"
 
 }
-
 
 
 function gunVolley() {
