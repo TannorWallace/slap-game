@@ -15,7 +15,7 @@ let enemy = {
 
 
 let shipHealth = document.getElementById("health")
-let enemyShip = document.getElementById("enemy-health")
+let enemyShipStatus = document.getElementById("enemy-status")
 
 let lazCannons = 10;
 let gunBattery = 50;
@@ -24,11 +24,7 @@ let boardingTorpedos = 100;
 
 
 // Do I set values for the munitions?
-function update() {
-  document.getElementById('health').innerText = enemy.health.toString()
-  document.getElementById("enemy-health").innerText = enemyShip.toString()
 
-}
 
 let explosion = document.getElementById("explode");
 
@@ -68,22 +64,30 @@ let resistanceItems = {
 
 function update() {
   if (enemy.health <= 2200) {
-    shipHealth.innerHTML = "Void Shields Destroyed!!!"
+    enemyShipStatus.innerHTML = "Void Shields Destroyed!!!"
   }
   if (enemy.health <= 1700) {
-    shipHealth.innerHTML = "Armor Destroyed!!!"
+    enemyShipStatus.innerHTML = "Armor Destroyed!!!"
   }
   if (enemy.health <= 900) {
-    shipHealth.innerHTML = "Victory is close Brothers!!!"
+    enemyShipStatus.innerHTML = "Victory is close Brothers!!!"
   }
   if (enemy.health <= 300) {
-    shipHealth.innerHTML = "Press the attack!!!"
+    enemyShipStatus.innerHTML = "Press the attack!!!"
   }
   if (enemy.health == 0) {
-    shipHealth.innerHTML = "Ship Destroyed Glory to the EMPEROR!!!"
+    enemyShipStatus.innerHTML = "Ship Destroyed Glory to the EMPEROR!!!"
   }
+  //Vengeful spirit updates do them here "id="defense-status"
+  if (enemy.items.length > 0) {
+    document.getElementById("defense-status").innerText = enemy.items[0].description
 
+
+  }
+  document.getElementById('health').innerText = enemy.health.toString()
 }
+
+
 function lazAttack() {
   enemy.health -= lazCannons + addMods()
   console.log(enemy.health)
@@ -113,15 +117,13 @@ function torpedos() {
 }
 
 
-update()
-
 
 function addItem(item) {
   if (!enemy.items.length) {
     enemy.items.push(resistanceItems[item])
   }
   console.log(enemy.items)
-
+  update()
   // add the voids object to the shipItems array
 }
 
